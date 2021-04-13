@@ -8,8 +8,8 @@
   --adress-text: rgb(255, 255, 255, 60%);
   --button-color: #f5f4fa;
 
-  --main-fonts: ""Roboto"", sans-serif;
-  --second-font: ""Raleway"", sans-serif;
+  --main-fonts: "Roboto", sans-serif;
+  --second-font: "Raleway", sans-serif;
 
   --mardgin: 50px;
 }
@@ -78,9 +78,8 @@ p {
   display: flex;
   margin-left: 93px;
 }
-.site-nav .item {
-  outline: 1px solid green;
-}
+
+
 /* дала всем элементам ли класса сайт-нау марджтин, кроме последнего */
 .site-nav .item:not(:last-child) {
   margin-right: var(--mardgin);
@@ -104,8 +103,7 @@ p {
 /* contacts */
 .contact-header {
   display: flex;
-  outline: 1px solid blue;
-  margin-left: auto;
+    margin-left: auto;
   
 }
 /* Если есть сосед сверху,дать ему левый внешний отступ */
@@ -114,7 +112,7 @@ p {
   
 }
   
-}
+
 .contact {
   font-weight: 500;
   line-height: 1.17;
