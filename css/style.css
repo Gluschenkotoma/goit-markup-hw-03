@@ -12,7 +12,7 @@
   --main-fonts: "Roboto", sans-serif;
   --second-font: "Raleway", sans-serif;
 
-  --mardgin: 50px;
+  --margin: 50px;
   --card-set-gap: 30px;
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -64,7 +64,7 @@ img {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
-  margin: 0;
+
   margin-left: auto;
   margin-right: auto;
 
@@ -73,7 +73,7 @@ img {
 .line {
   border-bottom: 1px solid #ececec;
 }
-.page-header > .conteiner {
+.header-conteiner {
   display: flex;
   align-items: center;
 }
@@ -98,7 +98,7 @@ img {
 
 /* дала всем элементам ли класса сайт-нау марджтин, кроме последнего */
 .site-nav .item:not(:last-child) {
-  margin-right: var(--mardgin);
+  margin-right: var(--margin);
 }
 
 .site-nav .link {
@@ -123,7 +123,7 @@ img {
 }
 /* Если есть сосед сверху,дать ему левый внешний отступ */
 .contact-header .item + .item {
-  margin-left: var(--mardgin);
+  margin-left: var(--margin);
 }
 
 .contact {
@@ -250,9 +250,10 @@ section.team {
 .name-position {
   padding-top: var(--card-set-gap);
   padding-bottom: var(--card-set-gap);
+  text-align: center;
 }
 .name-position .title-name {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* footer */
@@ -333,8 +334,10 @@ section.team {
   margin-top: var(--card-set-gap);
 }
 .card {
-  border: 1px solid #eeeeee;
 }
 .card-content {
   padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
