@@ -4,6 +4,7 @@
   --additional-text-color: #757575;
   --title-text-color: #ffffff;
   --bgc-color: #2f303a;
+  --third-bg-color: #f5f4fa;
   --secondary-bg-color: #e5e5e5;
   --adress-text: rgb(255, 255, 255, 60%);
   --button-color: #f5f4fa;
@@ -12,6 +13,7 @@
   --second-font: "Raleway", sans-serif;
 
   --mardgin: 50px;
+  --card-set-gap: 30px;
 }
 body {
   font-size: 14px;
@@ -40,6 +42,10 @@ h6,
 p {
   margin-top: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 
 /* Conteiner header */
 .conteiner {
@@ -49,17 +55,15 @@ p {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  
 
   outline: 1px solid tomato;
 }
-.line{
-    border-bottom: 1px solid #ECECEC;
+.line {
+  border-bottom: 1px solid #ececec;
 }
 .page-header > .conteiner {
   display: flex;
   align-items: center;
-  
 }
 .logo {
   font-weight: 700;
@@ -73,14 +77,12 @@ p {
   color: var(--main-text-color);
 }
 /* navigation */
-.nav{
+.nav {
   margin-left: 93px;
 }
 .site-nav {
   display: flex;
-  
 }
-
 
 /* дала всем элементам ли класса сайт-нау марджтин, кроме последнего */
 .site-nav .item:not(:last-child) {
@@ -105,15 +107,12 @@ p {
 /* contacts */
 .contact-header {
   display: flex;
-    margin-left: auto;
-  
+  margin-left: auto;
 }
 /* Если есть сосед сверху,дать ему левый внешний отступ */
 .contact-header .item + .item {
   margin-left: var(--mardgin);
-  
 }
-  
 
 .contact {
   font-weight: 500;
@@ -128,19 +127,18 @@ p {
 /* hero */
 .hero {
   padding-top: 200px;
- padding-bottom: 200px;
- width: 1800px;
+  padding-bottom: 200px;
+  width: 1800px;
   background-color: var(--bgc-color);
-  
 }
 .hero-title {
- display: block; 
- text-align: center;
- 
- max-width: 696px;
- margin: 0;
- margin-left: auto;
- margin-right: auto;
+  display: block;
+  text-align: center;
+
+  max-width: 696px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   color: var(--title-text-color);
   font-weight: 900;
@@ -154,7 +152,7 @@ p {
   display: block;
   margin-top: 30px;
   margin-bottom: 0;
-  margin-right:auto;
+  margin-right: auto;
   margin-left: auto;
   padding: 10px 32px;
   color: var(--title-text-color);
@@ -168,7 +166,7 @@ p {
   cursor: pointer;
 }
 /* sections */
-.section{
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
   outline: 1px solid rgb(71, 255, 132);
@@ -185,27 +183,23 @@ p {
   text-transform: uppercase;
 }
 /* Какие мы */
-.descrption{
+.descrption {
   display: flex;
-      
-  
 }
- .descrption >.list-item + .list-item {
- margin-left: 30px;
+.descrption > .list-item + .list-item {
+  margin-left: 30px;
 }
 
-.list-item{
+.list-item {
   width: 270px;
   outline: 1px solid rgb(71, 255, 102);
-
 }
-.list-item .text{
+.list-item .text {
   margin-bottom: 0;
 }
-.list-item .title{
+.list-item .title {
   margin-bottom: 10px;
 }
-
 
 .text {
   color: var(--additional-text-color);
@@ -223,11 +217,15 @@ p {
   color: var(--additional-text-color);
 }
 /* -- Чем мы занимаемся */
-.picture.list{
+.picture.list {
   display: flex;
 }
-.picture.list>.picture +.picture{
+.picture.list > .picture + .picture {
   margin-left: 30px;
+}
+/* team */
+section.team {
+  background-color: var(--third-bg-color);
 }
 
 /* footer */
@@ -264,12 +262,14 @@ p {
   color: var(--accent-text-color);
 }
 .portf-link-title {
+  margin-bottom: 4px;
   color: var(--main-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .portf-link-text {
+  margin-bottom: 0;
   color: var(--additional-text-color);
   font-size: 16px;
   line-height: 1.8;
@@ -284,4 +284,33 @@ p {
   width: 1px !important;
   overflow: hidden;
 }
-"
+.btn-portfolio {
+  display: flex;
+  margin-bottom: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: mediumspringgreen;
+}
+.btn-portfolio > .btn-portfolio-item + .btn-portfolio-item {
+  margin-left: 8px;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+
+  /* outline: 1px solid lawngreen; */
+}
+.card-set-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+  /* outline: 1px solid rgb(252, 0, 139); */
+}
+.card {
+  border: 1px solid #eeeeee;
+}
+.card-content {
+  padding: 20px 24px;
+}
