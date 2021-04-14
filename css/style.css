@@ -14,6 +14,8 @@
 
   --mardgin: 50px;
   --card-set-gap: 30px;
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 body {
   font-size: 14px;
@@ -41,12 +43,22 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 img {
   display: block;
   max-width: 100%;
 }
-
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 /* Conteiner header */
 .conteiner {
   width: 1200px;
@@ -171,6 +183,9 @@ img {
   padding-bottom: 94px;
   outline: 1px solid rgb(71, 255, 132);
 }
+.section.about {
+  padding-bottom: 0;
+}
 .section-title {
   text-align: center;
   font-size: 36px;
@@ -227,16 +242,33 @@ img {
 section.team {
   background-color: var(--third-bg-color);
 }
+.worker {
+  box-shadow: var(--card-shadow);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.name-position {
+  padding-top: var(--card-set-gap);
+  padding-bottom: var(--card-set-gap);
+}
+.name-position .title-name {
+  padding-bottom: 10px;
+}
 
 /* footer */
 .footer {
   background-color: #2f303a;
 }
 .address {
+  margin-top: 20px;
   color: var(--title-text-color);
   line-height: 1.7;
   font-style: inherit;
 }
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .contacts-footer {
   color: var(--adress-text);
 }
@@ -247,8 +279,20 @@ section.team {
 .logo-studio {
   color: var(--title-text-color);
 }
+.footer > .conteiner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 /* portfolio */
+.btn-portfolio {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.btn-portfolio > .btn-portfolio-item + .btn-portfolio-item {
+  margin-left: 8px;
+}
 .portfolio-button {
   background-color: var(--button-color);
   border: transparent;
@@ -256,6 +300,8 @@ section.team {
   font-size: 16px;
   line-height: 1.6;
   cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
 }
 .portfolio-button:hover,
 :focus {
@@ -274,39 +320,17 @@ section.team {
   font-size: 16px;
   line-height: 1.8;
 }
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-.btn-portfolio {
-  display: flex;
-  margin-bottom: 54px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: mediumspringgreen;
-}
-.btn-portfolio > .btn-portfolio-item + .btn-portfolio-item {
-  margin-left: 8px;
-}
+
 .card-set {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
-
-  /* outline: 1px solid lawngreen; */
 }
 .card-set-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
-  /* outline: 1px solid rgb(252, 0, 139); */
 }
 .card {
   border: 1px solid #eeeeee;
