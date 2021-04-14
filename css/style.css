@@ -168,9 +168,16 @@ p {
   cursor: pointer;
 }
 /* sections */
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  outline: 1px solid rgb(71, 255, 132);
+}
 .section-title {
+  text-align: center;
   font-size: 36px;
   line-height: 1.17;
+  margin-bottom: var(--mardgin);
 }
 .title {
   font-size: 14px;
@@ -180,8 +187,7 @@ p {
 /* Какие мы */
 .descrption{
   display: flex;
-      padding-top: 94px;
-    padding-bottom: 94px;
+      
   
 }
  .descrption >.list-item + .list-item {
@@ -215,6 +221,13 @@ p {
 }
 .text-name {
   color: var(--additional-text-color);
+}
+/* -- Чем мы занимаемся */
+.picture.list{
+  display: flex;
+}
+.picture.list>.picture +.picture{
+  margin-left: 30px;
 }
 
 /* footer */
